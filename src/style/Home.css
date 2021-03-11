@@ -1,0 +1,9 @@
+.maincont{
+    margin-top: 10px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5px;
+}

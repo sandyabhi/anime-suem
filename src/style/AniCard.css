@@ -1,0 +1,18 @@
+.anicrdcont{
+    max-width: 300px;
+}
+
+.anicrdppr{
+    max-width: 300px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.anicrdppr:hover{
+    background-color: rgb(185, 179, 190);
+    opacity: 0.9;
+}
