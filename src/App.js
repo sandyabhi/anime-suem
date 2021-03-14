@@ -6,54 +6,57 @@ import Footer from "./components/Footer.js"
 import Home from "./components/Home.js"
 import Main from "./components/Main.js"
 import Nav from "./components/Nav.js"
-import SideBar from "./components/SideBar"
+import Filter from "./components/Filter"
+
 
 function App() {
   const [animeList, setAnimeList] = useState([])
   const [topAnime, setTopAnime] = useState([])
   const [search, setSearch] = useState("")
+  const [select, setSelect] = useState("favorite")
 
-  const getTopAnime = async () => {
-    const temp = await fetch("https://api.jikan.moe/v3/top/anime/1/bypopularity")
+
+  const getAnime = async (query) => {
+    const temp = await fetch(`https://api.jikan.moe/v3/top/anime/1/${query}`)
       .then((res) => res.json())
-    setTopAnime(temp.top.slice(0, 7));
+    setTopAnime(temp.top);
   }
 
-  useEffect(() => {
-    getTopAnime();
-  }, [])
- 
-	const handleSearch = e => {
-		e.preventDefault();
+  getAnime(select);
 
-		fetchAnime(search);
-	}
+  const handleSearch = e => {
+    e.preventDefault();
+    fetchAnime(search);
+  }
 
-	const fetchAnime = async (query) => {
-		const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=30`)
-			.then(res => res.json());
+  const fetchAnime = async (query) => {
+    const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=30`)
+      .then(res => res.json());
 
-		setAnimeList(temp.results);
-	}
-  
+    setAnimeList(temp.results);
+  }
+
   return (
     <>
-           <div>
+      <div>
         <Header />
+
         <Nav
-            handleSearch={handleSearch}
-            search={search}
-            setSearch={setSearch}
-             />
-        <SideBar topAnime={topAnime} />
-        <Home
-     
-          animeList={animeList}
+          handleSearch={handleSearch}
+          search={search}
+          setSearch={setSearch}
         />
-   
+        <Filter
+          setSelect={setSelect}
+          select={select} />
+
+        <Main topAnime={topAnime} />
+
+        <Home animeList={animeList} />
+
         <Footer />
       </div>
-    
+
     </>
   );
 }
