@@ -1,21 +1,31 @@
 import React from 'react'
 
-function Main({topAnime}) {
+import { Typography, Paper, Link, Grid} from '@material-ui/core'
+
+function Main({ topAnime }) {
     return (
-        <aside>
-        <nav>
-            <h3>Top Anime</h3>
-            {topAnime.map(anime => (
-                <a href={anime.url}
-                    target="-blank"
-                    key={anime.mal_id}
-                    rel="noref"
-                >
-                    {anime.title}
-                </a>
-            ))}
-        </nav>
-    </aside>
+        <>
+                    {topAnime.map(anime => (
+                        <Grid container item xs={1} className="anicrdcont">
+                            <Paper elevation={3} className="anicrdppr">
+                                <Link>
+                                    <img
+                                        style={{ maxHeight: 300 }}
+                                        src={anime.image_url}
+                                        alt={anime.title} />
+
+                                </Link>
+                                <Typography variant="h5" component="h5" >
+                                    {anime.title}
+                                </Typography>
+                                <Typography variant="body2" component="h2" paragraph={true} >
+                                    {anime.synopsis}
+                                </Typography>
+                            </Paper>
+                        </Grid>
+                    ))}
+             
+        </>
     )
 }
 

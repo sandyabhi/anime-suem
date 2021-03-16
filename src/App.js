@@ -46,13 +46,17 @@ function App() {
           search={search}
           setSearch={setSearch}
         />
-        <Filter
-          setSelect={setSelect}
-          select={select} />
+        {(search === "") ?
+          <>
+            <Filter
+              setSelect={setSelect}
+              select={select} />
+            <Main topAnime={topAnime} />
+          </>
+          : <><Home animeList={animeList} /> </>
+          }
 
-        <Main topAnime={topAnime} />
-
-        <Home animeList={animeList} />
+        
 
         <Footer />
       </div>
