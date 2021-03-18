@@ -19,28 +19,16 @@ const useStyles = makeStyles((theme) => ({
 
 function Filter(props) {
     const classes = useStyles();
-
-// const [open, setOpen] = useState()
-//     const handleClose = () => {
-//         setOpen(false);
-//     };
-
-//     const handleOpen = () => {
-//         setOpen(true);
-//     };
-
  
     return (
         <div>
         
-            <FormControl className={classes.formControl}>
+            <FormControl className={classes.formControl}
+             onChange={props.handleAnime}>
                 <InputLabel id="demo-controlled-open-select-label"></InputLabel>
                 <Select
                     labelId="demo-controlled-open-select-label"
                     id="demo-controlled-open-select"
-                //    open={open}
-                //        onClose={handleClose}
-                //       onOpen={handleOpen}
                 value={props.select}
                 onChange={e => props.setSelect(e.target.value)}
                  >

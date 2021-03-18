@@ -20,9 +20,22 @@ function App() {
     const temp = await fetch(`https://api.jikan.moe/v3/top/anime/1/${query}`)
       .then((res) => res.json())
     setTopAnime(temp.top);
+
   }
 
-  getAnime(select);
+  useEffect(() => {
+    
+    return () => {
+      getAnime(select);
+    }
+  }, [])
+
+  const handleAnime = e => {
+    e.preventDefault()
+    getAnime(select);
+  }
+
+ 
 
   const handleSearch = e => {
     e.preventDefault();
@@ -50,7 +63,8 @@ function App() {
           <>
             <Filter
               setSelect={setSelect}
-              select={select} />
+              select={select}
+              handleAnime={handleAnime} />
             <Main topAnime={topAnime} />
           </>
           : <><Home animeList={animeList} /> </>

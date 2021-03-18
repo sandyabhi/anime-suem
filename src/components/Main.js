@@ -1,30 +1,33 @@
 import React from 'react'
-
-import { Typography, Paper, Link, Grid} from '@material-ui/core'
+import "../style/Main.css"
+import { Typography, Paper, Link, Grid, GridListTile} from '@material-ui/core'
 
 function Main({ topAnime }) {
     return (
         <>
+        <Grid className="maincontent">
                     {topAnime.map(anime => (
-                        <Grid container item xs={1} className="anicrdcont">
-                            <Paper elevation={3} className="anicrdppr">
-                                <Link>
+                        
+                        <Grid className="crdcont" >
+                            <Grid container item xs={1} >
+                            <Paper elevation={2} className="crdppr">
+                               
                                     <img
                                         style={{ maxHeight: 300 }}
                                         src={anime.image_url}
                                         alt={anime.title} />
 
-                                </Link>
-                                <Typography variant="h5" component="h5" >
+                           
+                                <Typography variant="h6" component="h5" >
                                     {anime.title}
                                 </Typography>
-                                <Typography variant="body2" component="h2" paragraph={true} >
-                                    {anime.synopsis}
-                                </Typography>
+                         
                             </Paper>
+                            </Grid>
                         </Grid>
+                       
                     ))}
-             
+             </Grid>
         </>
     )
 }

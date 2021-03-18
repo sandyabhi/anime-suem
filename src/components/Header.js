@@ -1,10 +1,12 @@
- import React from 'react'
+ import { Typography } from '@material-ui/core'
+import React from 'react'
+import "../style/Header.css"
  
  const Header = () => {
      return (
-        <header>
-            Anime Hunger
-        </header>
+        <Typography className="header">
+            ANIME HUNGER
+        </Typography>
      )
  }
  

@@ -1,9 +1,9 @@
 .anicrdcont{
-    max-width: 300px;
+    width: 300px;
 }
 
 .anicrdppr{
-    max-width: 300px;
+    width: 300px;
     padding: 5px;
     display: flex;
     align-items: center;

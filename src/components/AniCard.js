@@ -5,7 +5,7 @@ import { Typography, Paper, Link, GridList, GridListTile, FormControl, Input, Ic
 
 function AniCard({ anime }) {
 	return (
-		<>
+		<><Grid>
 			<Grid container item xs={1} className="anicrdcont">
 				<Paper elevation={3} className="anicrdppr">
 					
@@ -25,7 +25,7 @@ function AniCard({ anime }) {
 				
 				</Paper>
 			</Grid>
-		
+			</Grid>
 		</>
 	)
 }
