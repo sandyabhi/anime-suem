@@ -9,16 +9,18 @@ function Main({ topAnime }) {
                     {topAnime.map(anime => (
                         
                         <Grid className="crdcont" >
-                            <Grid container item xs={1} >
-                            <Paper elevation={2} className="crdppr">
-                               
+                            <Grid container item sm >
+                            <Paper elevation={3} className="crdppr"
+                             
+                            >
+                               <Link href={anime.url}>
                                     <img
                                         style={{ maxHeight: 300 }}
                                         src={anime.image_url}
                                         alt={anime.title} />
-
+</Link>
                            
-                                <Typography variant="h6" component="h5" >
+                                <Typography variant="body2" component="h5" >
                                     {anime.title}
                                 </Typography>
                          

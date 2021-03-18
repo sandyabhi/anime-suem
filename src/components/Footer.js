@@ -10,24 +10,22 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 const Footer = () => {
     return (
 
-        <Grid className="footer" >
-            <Grid>
-            <Link><InstagramIcon /></Link>
 
+        <Grid className="footer">
+            <Grid className="foot-row">
+                <Link><InstagramIcon /></Link>
 
-            <Link>   <FacebookIcon /> </Link>
+                <Link>  <FacebookIcon /> </Link>
 
+                <Link> <LinkedInIcon /></Link>
 
-            <Link> <LinkedInIcon /></Link>
+                <Link><GitHubIcon /></Link>
 
-
-
-            <Link><GitHubIcon /></Link>
-
-
-            <Link> <TwitterIcon /></Link>
+                <Link> <TwitterIcon /></Link>
             </Grid>
+            <Typography variant="body2" className="foottxt">Created By: Sandeep Kumar Patel</Typography>
         </Grid>
+
 
     )
 }

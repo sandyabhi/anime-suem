@@ -1,18 +1,17 @@
 .anicrdcont{
-    width: 300px;
+    margin: 12px;
 }
 
 .anicrdppr{
-    width: 300px;
-    padding: 5px;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    padding: 12px;
 }
 
 .anicrdppr:hover{
-    background-color: rgb(185, 179, 190);
-    opacity: 0.9;
+    background-color: rgb(39, 39, 39);
+    color: white;
 }

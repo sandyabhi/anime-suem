@@ -1,12 +1,12 @@
- import { Typography } from '@material-ui/core'
+import { Grid, Link, BottomNavigation, BottomNavigationAction, Typography } from '@material-ui/core';
 import React from 'react'
 import "../style/Header.css"
  
  const Header = () => {
      return (
-        <Typography className="header">
+        <Grid className="header">
             ANIME HUNGER
-        </Typography>
+        </Grid>
      )
  }
  

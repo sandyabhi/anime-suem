@@ -1,11 +1,13 @@
 .maincontent{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .crdcont{
-    margin: 10px;
-    display: flex;
+    margin: 12px;    
 }
 .crdppr{
     display: flex;
@@ -13,13 +15,14 @@
     align-content: center;
     justify-content: center;
     flex-direction: column;
-    padding: 7px;
+    padding: 12px;
 }
 
 .crdppr:hover{
-    background-color: rgb(185, 179, 190);
-    opacity: 0.9;
+    background-color: rgb(39, 39, 39);
+    color: white;
 }
+
 
 /* .crdcont{
    width: 320px;

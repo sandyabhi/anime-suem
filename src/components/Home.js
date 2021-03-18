@@ -10,7 +10,6 @@ import Filter from "./Filter"
 function Home(props) {
     return (
         <>
-
             <Grid className="maincont">
                 {props.animeList.map(anime => (
                     <AniCard
