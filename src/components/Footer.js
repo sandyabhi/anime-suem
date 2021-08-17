@@ -1,33 +1,22 @@
-import React from 'react'
-import "../style/Footer.css"
-import { Grid, Link, BottomNavigation, BottomNavigationAction, Typography } from '@material-ui/core';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import "../styles/Footer.css";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import { Button } from "@material-ui/core";
 
-const Footer = () => {
-    return (
-
-
-        <Grid className="footer">
-            <Grid className="foot-row">
-                <Link><InstagramIcon /></Link>
-
-                <Link>  <FacebookIcon /> </Link>
-
-                <Link> <LinkedInIcon /></Link>
-
-                <Link><GitHubIcon /></Link>
-
-                <Link> <TwitterIcon /></Link>
-            </Grid>
-            <Typography variant="body2" className="foottxt">Created By: Sandeep Kumar Patel</Typography>
-        </Grid>
-
-
-    )
+function Footer() {
+  return (
+    <footer>
+   
+    <p>Created by: Sandeep Kumar Patel</p>
+      <a href="">
+        <GitHubIcon />
+      </a>
+      <a href="">
+        <LinkedInIcon />
+      </a>
+    
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

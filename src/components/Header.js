@@ -1,14 +1,13 @@
-import { Grid, Link, BottomNavigation, BottomNavigationAction, Typography } from '@material-ui/core';
-import React from 'react'
-import "../style/Header.css"
- 
- const Header = () => {
-     return (
-        <Grid className="header">
-            ANIME HUNGER
-        </Grid>
-     )
- }
- 
- export default Header
- 
+import "../styles/Header.css";
+
+function Header() {
+  return (
+ <header className="header">
+   <h1 className="title">
+     Anime-Suem
+   </h1>
+ </header>
+  );
+}
+
+export default Header;

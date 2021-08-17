@@ -1,0 +1,43 @@
+.card-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.card-body {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  margin: 10px;
+  text-decoration: none;
+  background-color: grey;
+  color: black;
+  border-radius: 12px;
+}
+
+.card-fig {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-top-left-radius: 12px 12px;
+  border-top-right-radius: 12px 12px;
+}
+
+.card-title {
+  margin-bottom: 5%;
+  text-align: center;
+  font-size: small;
+}
+
+a:hover{
+    text-decoration: none;
+    background-color: rgb(19, 18, 18);
+    color: white;
+    box-shadow: 5px 5px 15px rgb(26, 25, 25);
+}

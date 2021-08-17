@@ -1,37 +1,17 @@
-import React from 'react'
-import "../style/Main.css"
-import { Typography, Paper, Link, Grid, GridListTile} from '@material-ui/core'
-
+import "../styles/Main.css"
 function Main({ topAnime }) {
-    return (
-        <>
-        <Grid className="maincontent">
-                    {topAnime.map(anime => (
-                        
-                        <Grid className="crdcont" >
-                            <Grid container item sm >
-                            <Paper elevation={3} className="crdppr"
-                             
-                            >
-                               <Link href={anime.url}>
-                                    <img
-                                        style={{ maxHeight: 300 }}
-                                        src={anime.image_url}
-                                        alt={anime.title} />
-</Link>
-                           
-                                <Typography variant="body2" component="h5" >
-                                    {anime.title}
-                                </Typography>
-                         
-                            </Paper>
-                            </Grid>
-                        </Grid>
-                       
-                    ))}
-             </Grid>
-        </>
-    )
+  return (
+    <div className="card-main">
+      {topAnime.map((anime) => (
+        <a className="card-body" href={anime.url}>
+          <figure className="card-fig">
+            <img className="card-image" src={anime.image_url} alt="Anime Image" />
+          </figure>
+          <h3 className="card-title">{anime.title}</h3>
+        </a>
+      ))}
+    </div>
+  );
 }
 
-export default Main
+export default Main;
