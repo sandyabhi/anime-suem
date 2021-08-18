@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import Home from "./pages/Home.js";
-import Main from "./components/Main";
+import "./styles/index.css";
 
 function App() {
   const [animeList, setAnimeList] = useState([]);
   const [topAnime, setTopAnime] = useState([]);
   const [search, setSearch] = useState("");
 
+  // Fetching top anime (by popularity) from jikan API
   const getTopAnime = async () => {
-    const temp = await fetch(
+    const data = await fetch(
       `https://api.jikan.moe/v3/top/anime/1/bypopularity`
     ).then((res) => res.json());
 
-    setTopAnime(temp.top);
+    setTopAnime(data.top);
   };
 
   const handleSearch = (e) => {
@@ -23,34 +23,39 @@ function App() {
 
     fetchAnime(search);
   };
-
-  const fetchAnime = async (query) => {
-    const temp = await fetch(
-      `https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=10`
+  
+  // Fetching searched anime from jikan API
+  const fetchAnime = async (anime_name) => {
+    const data = await fetch(
+      `https://api.jikan.moe/v3/search/anime?q=${anime_name}&order_by=title&sort=asc&limit=10`
     ).then((res) => res.json());
 
-    setAnimeList(temp.results);
+    setAnimeList(data.results);
   };
 
+  // get getTopAnime() as the site render
   useEffect(() => {
     getTopAnime();
   }, []);
 
   return (
-    <div className="App">
+    <>
+    <div className="App" >
       <Header />
-      <div className="content">
-        <Main topAnime={topAnime} />
-        <Home
-          handleSearch={handleSearch}
-          search={search}
-          setSearch={setSearch}
-          animeList={animeList}
-        />
-      </div>
+
+      {/*  Main Content  */}
+      <Home
+        // passing props
+        handleSearch={handleSearch}
+        search={search}
+        setSearch={setSearch}
+        animeList={animeList}
+        topAnime={topAnime}
+      />
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 }
 

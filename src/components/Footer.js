@@ -1,19 +1,23 @@
 import "../styles/Footer.css";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import { Button } from "@material-ui/core";
 
 function Footer() {
   return (
     <footer>
-   
-    <p>Created by: Sandeep Kumar Patel</p>
-      <a href="">
-        <GitHubIcon />
+   <div className="footer">
+    
+      <p>Created by: Sandeep Kumar Patel</p>
+      
+      <a href="" className="foots">
+        <GitHubIcon /> Github
       </a>
-      <a href="">
-        <LinkedInIcon />
+ 
+      <a href="" className="foots">
+        <LinkedInIcon /> Linkedin
       </a>
+     
+   </div>
     
     </footer>
   );

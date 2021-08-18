@@ -1,14 +1,26 @@
-footer{
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(35, 0, 163);
-    color: white;
-    text-align: center;
-    padding: 10px;
+footer {
+  left: 0;
+  bottom: 0;
+  background-color: rgb(35, 0, 163);
+  color: aqua;
+  text-align: center;
+  padding: 10px;
 }
 
+.foots {
+  color: aqua;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
 
-a{
-    margin: 10px;
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.foots:hover {
+  color: rgb(116, 2, 110);
 }

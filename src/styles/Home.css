@@ -1,0 +1,20 @@
+.home {
+  margin: 30px;
+}
+
+input {
+  width: 100%;
+  border: 2px solid #9252a5;
+  padding: 5px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 20px;
+  outline: none;
+  color: #0f0f0f;
+}
+
+.card-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}

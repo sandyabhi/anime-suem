@@ -1,8 +1,13 @@
 How to Run
-yarn
-npm i
 
-yarn start
-npm start
+``Using yarn``
 
-Jikan API used to fetch the data
+1) "yarn "
+2) "yarn start"
+
+``Using npm``
+
+1) "npm i "
+2) "npm start"
+
+

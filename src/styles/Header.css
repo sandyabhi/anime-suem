@@ -1,11 +1,11 @@
 .header {
   padding: 10px;
-  background-color: rgb(117, 17, 184);
+  background-color: rgb(43, 39, 247);
   box-shadow: 1px 3px 10px black;
 }
 
 .title {
   color: whitesmoke;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 7px 8px black;
   text-align: center;
 }
