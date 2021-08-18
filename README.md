@@ -1,5 +1,5 @@
-###[LIVE](https://anime-suem.netlify.app/)
-###[POST](https://dev.to/sandyabhi/anime-list-reactjs-jikan-api-2njp)
+ [LIVE](https://anime-suem.netlify.app/)
+ [POST](https://dev.to/sandyabhi/anime-list-reactjs-jikan-api-2njp)
 
 How to Run
 
