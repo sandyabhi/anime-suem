@@ -1,3 +1,5 @@
+LIVE: https://anime-suem.netlify.app/
+
 How to Run
 
 ``Using yarn``

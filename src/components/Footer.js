@@ -9,11 +9,11 @@ function Footer() {
     
       <p>Created by: Sandeep Kumar Patel</p>
       
-      <a href="" className="foots">
+      <a href="https://github.com/sandyabhi/anime-suem" className="foots">
         <GitHubIcon /> Github
       </a>
  
-      <a href="" className="foots">
+      <a href="https://www.linkedin.com/in/sandeep-kumar-patel47/" className="foots">
         <LinkedInIcon /> Linkedin
       </a>
      
