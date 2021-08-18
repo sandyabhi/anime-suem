@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import Home from "./pages/Home.js";
-import "./styles/index.css";
+
 
 function App() {
   const [animeList, setAnimeList] = useState([]);
