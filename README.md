@@ -1,6 +1,8 @@
- -[LIVE](https://anime-suem.netlify.app/)
+[LIVE](https://anime-suem.netlify.app/)
  
- -[POST](https://dev.to/sandyabhi/anime-list-reactjs-jikan-api-2njp)
+[Explaination About the Project](https://dev.to/sandyabhi/anime-list-reactjs-jikan-api-2njp)
+
+--------------------------------------------------------------------------
 
 How to Run
 
